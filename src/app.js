@@ -6,6 +6,7 @@ const forecast = require("./utils/forecast");
 
 //express is a function.its methods can be used as below.
 const app = express();
+const port = process.env.PORT || 3000
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
@@ -99,8 +100,8 @@ app.get("*", (req, res) => {
   });
 });
 
-app.listen(8080, () => {
-  console.log("Server is up and running on port-8080");
+app.listen(port , () => {
+  console.log("Server is up and running on port "+ port);
 });
 
 // app.get('/about', (req,res) => {
