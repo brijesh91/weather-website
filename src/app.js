@@ -6,7 +6,7 @@ const forecast = require("./utils/forecast");
 
 //express is a function.its methods can be used as below.
 const app = express();
-const port = process.env.PORT || 3000
+const port = process.env.PORT || 8080
 
 // Define paths for express config
 const publicDirectoryPath = path.join(__dirname, "../public");
