@@ -14,7 +14,9 @@ const forecast = (latitude,longitude,callback) => {
             callback('Unable to find data for the provided location',undefined);
         } else {
             //console.log(response);
-            callback(undefined, 'It is ' + body.weather[0].description + ' Outside.It is currently ' + body.main.temp + ' degrees out.');
+            callback(undefined, 'It is ' + body.weather[0].description + ' Outside.It is currently ' + body.main.temp
+            + ' degrees out. Min temp will be ' + body.main.temp_min + ' degrees, And Max temp will be ' + body.main.temp_max +
+             ' degrees.');
         }
     })
 }
