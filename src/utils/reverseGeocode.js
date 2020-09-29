@@ -2,7 +2,7 @@ const request = require('request');
 
 const reverseGeocode = (longitude,latitude,callback) => {
     // console.log(longitude,latitude);
-    const revURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(longitude) + "," + encodeURIComponent(latitude) + ".json?access_token=pk.eyJ1IjoiYnJpamVzaC1yYXRob2QiLCJhIjoiY2s5MmtwZm1rMDlmejNsbnM1eWd0ODB0ciJ9.motp8JfGFRVb7UIz6--ktA&limit=1"
+    const revURL = "https://api.mapbox.com/geocoding/v5/mapbox.places/" + encodeURIComponent(longitude) + "," + encodeURIComponent(latitude) + ".json?access_token=&limit=1"
     // console.log(revURL);
     request({url: revURL, json:true}, (error,response) => {
         if(error) {
