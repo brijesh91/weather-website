@@ -4,14 +4,14 @@ const request = require("request");
 //Address -> Lat/Long -> weather
 
 //reverse
-// https://api.mapbox.com/geocoding/v5/mapbox.places/72.877426,19.076090.json?access_token=pk.eyJ1IjoiYnJpamVzaC1yYXRob2QiLCJhIjoiY2s5MmtwZm1rMDlmejNsbnM1eWd0ODB0ciJ9.motp8JfGFRVb7UIz6--ktA&limit=1
+// https://api.mapbox.com/geocoding/v5/mapbox.places/72.877426,19.076090.json?access_token=&limit=1
 
 //forward
 const geocode = (address, callback) => {
   const url =
     "https://api.mapbox.com/geocoding/v5/mapbox.places/" +
     encodeURIComponent(address) +
-    ".json?access_token=pk.eyJ1IjoiYnJpamVzaC1yYXRob2QiLCJhIjoiY2s5MmtwZm1rMDlmejNsbnM1eWd0ODB0ciJ9.motp8JfGFRVb7UIz6--ktA&limit=1";
+    ".json?access_token=&limit=1";
 
   request({ url, json: true }, (error, { body } = {}) => {
     if (error) {
