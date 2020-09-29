@@ -1,7 +1,7 @@
 const request = require('request');
 
 const forecast = (latitude,longitude,callback) => {
-    const url = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=4db7eff4af4cd29b072f0879577a8443";
+    const url = "https://api.openweathermap.org/data/2.5/weather?lat=" + latitude + "&lon=" + longitude + "&units=metric&appid=";
 
     console.log(url);
     request({url, json:true}, (error,{ body } = {}) => {
